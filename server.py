@@ -54,7 +54,7 @@ def weather():
 @app.route('/order-melons.json', methods=['POST'])
 def order_melons():
     """Order melons and return a dictionary of result-code and result-msg."""
-
+    print(request.form)
     melon = request.form.get('melon_type')
     qty = int(request.form.get('qty'))
 
