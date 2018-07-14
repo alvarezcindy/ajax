@@ -37,6 +37,12 @@ $("#weather-form").on('submit', showWeather);
 // PART 3: ORDER MELONS
 
 function orderStatus(order) {
+	if (order['code'] === 'ERROR') {
+		$('#order-status').addClass("order-error");
+	} 
+	else {
+		$('#order-status').removeClass("order-error");
+	}
 	$('#order-status').html(order['msg']);
 }
 
